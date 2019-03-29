@@ -1,0 +1,23 @@
+$break-small: 415px;
+$break-large: 1200px;
+
+#header
+  width: 100%
+  display: flex
+  justify-items: center
+  align-items: center
+  flex-flow: column
+  margin-top: 30px
+  border-bottom: 1px solid black
+
+  h1
+    font-size: 24px
+    @media screen and (min-width: $break-small)
+      font-size: 30px
+
+  img
+    border-radius: 200px
+    width: 250px
+    height: 187.5px
+
+

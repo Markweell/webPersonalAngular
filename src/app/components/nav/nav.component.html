@@ -1,0 +1,31 @@
+<!-- <ul>
+  <li><a routerLink="">Inicio</a></li>
+  <li><a routerLink="/blog">Blog</a></li>
+  <li><a routerLink="/curriculum">Curriculum</a></li>
+  <li><a routerLink="/contacto">Contacto</a></li>
+</ul> -->
+<!-- <ul>
+<mat-button-toggle-group id="ul1" #group="matButtonToggleGroup">
+    <mat-button-toggle value="left">
+      <li><a routerLink="">Inicio</a></li>
+    </mat-button-toggle>
+    <mat-button-toggle value="center">
+      <li><a routerLink="/blog">Blog</a></li>
+    </mat-button-toggle>
+    <mat-button-toggle value="right" >
+      <li><a routerLink="/curriculum">Curriculum</a></li>
+    </mat-button-toggle>
+    <mat-button-toggle value="justify" >
+      <li><a routerLink="/contacto">Contacto</a></li>
+    </mat-button-toggle>
+</mat-button-toggle-group>
+</ul> -->
+<ul >
+    <mat-button-toggle-group id="ul1" #group="matButtonToggleGroup" >
+        <mat-button-toggle *ngFor="let element of elements" (click)='redirect(element.route)'>
+            <li>{{ element.name }}</li>
+        </mat-button-toggle>
+    </mat-button-toggle-group>
+</ul>
+
+

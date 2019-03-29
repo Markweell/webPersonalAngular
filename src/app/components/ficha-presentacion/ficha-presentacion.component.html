@@ -1,0 +1,19 @@
+<div id="ficha">
+  <div id="descripcionFicha">
+    <ul>
+      <li>Nombre: {{ elements?.name }}</li>
+      <li>Telefono: {{ elements?.phone }}</li>
+      <li>Email: {{ elements?.mail }}</li>
+    </ul>
+  </div>
+  <div id="photoFicha">
+    <img [src]="elements.photo" alt="" />
+    <ul>
+      <li *ngFor="let element of elements?.socialNetwork">
+        <a [href]="element.url"><i class="fab {{ element.icon }}"></i></a>
+      </li>
+    </ul>
+  </div>
+
+  <!-- <img src="../../../assets/fotos-perfil-whatsapp_16.jpg" alt=""> -->
+</div>

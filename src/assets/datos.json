@@ -1,0 +1,31 @@
+{
+  "NAV": [
+    { "name": "Inicio", "route": "" },
+    { "name": "Blog", "route": "/blog" },
+    { "name": "Curriculum", "route": "/curriculum" },
+    { "name": "Contacto", "route": "/contacto" }
+  ],
+  "FICHA": {
+    "name": "Marcos Gallardo Pérez",
+    "phone": "605231494",
+    "mail": "marcosgallardoperez@gmail.com",
+    "photo": "assets/fotos-perfil-whatsapp_16.jpg",
+    "socialNetwork": [
+      {
+        "name": "twitter",
+        "url": "https://twitter.com/Markweell",
+        "icon": "fa-twitter"
+      },
+      {
+        "name": "LinkedIn",
+        "url": "https://www.linkedin.com/in/marcos-gallardo-p%C3%A9rez-0027a0153/",
+        "icon": "fa-linkedin-in"
+      },
+      {
+        "name": "GitHub",
+        "url": "https://github.com/Markweell?tab=repositories",
+        "icon": "fab fa-github"
+      }
+    ]
+  }
+}
