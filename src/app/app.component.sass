@@ -1,14 +1,28 @@
+$break-small: 415px;
+$break-large: 1200px;
 #container
   width: 100%
   display: flex
   flex-flow: column
   align-items: center
   #header
-    width: 80%
+    width: 95%
+    @media screen and (min-width: $break-large)
+      width: 90%
+    @media screen and (min-width: $break-small)
+      width: 80%
   #nav
-    width: 80%
+    width: 95%
+    @media screen and (min-width: $break-large)
+      width: 90%
+    @media screen and (min-width: $break-small)
+      width: 80%
   #router
     margin-top: 30px
-    width: 80%
+    width: 95%
+    @media screen and (min-width: $break-large)
+      width: 90%
+    @media screen and (min-width: $break-small)
+      width: 80%
 
 

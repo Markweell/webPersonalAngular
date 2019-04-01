@@ -12,9 +12,8 @@ export class FichaPresentacionComponent implements OnInit {
   constructor(private acceso: AccesoJSONService) { }
 
   ngOnInit() {
-    this.acceso.getJSON().subscribe((data)=>{
+    this.acceso.getJSON().subscribe((data) => {
       this.elements = data['FICHA'];
-      console.log(this.elements);
     });
 
   }

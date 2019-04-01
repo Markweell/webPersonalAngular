@@ -1,0 +1,73 @@
+$break-small: 415px;
+$break-large: 1200px;
+$acentColor: rgba(242,177,0,1)
+$SecondaryText: #757575
+$PrimaryText: #212121
+$icons: #009688
+
+@function progress($percent)
+  $deg: $percent/100*180
+  @return #{$deg}deg
+
+@mixin circularProgress($percent,$skill,$color,$bgcolor)
+  $progress: 0
+  $progress: progress($percent)
+  transform: rotate($progress)
+  background: linear-gradient(0deg, $color 50%, rgba($color,.2) 50%)
+  &:before, &:after
+    color: $color
+  &:before
+    content: "#{$skill}"
+    background: $bgcolor content-box
+    transform: rotate(-#{$progress})
+  &:after
+    content: "#{$percent}%"
+    background: linear-gradient(transparent 50%, $bgcolor 50%)
+    transform: scale(1.1) rotate(-#{$progress})
+
+.circularProgress
+  &, &:before, &:after
+    width: 100px
+    height: 100px
+    border-radius: 50%
+  position: relative
+
+  &:before,&:after
+    top: 0px
+    left: 0px
+    position: absolute
+    text-align: center
+  &:before
+    padding: .5em
+    box-sizing: border-box
+    font-size: 1rem
+    line-height: 70px
+  &:after
+    font-size: .7rem
+    line-height: 116px
+
+.html
+  @include circularProgress(30,HTML5,$acentColor,white)
+
+.css
+  @include circularProgress(55,CSS,$icons,white)
+
+.js
+  @include circularProgress(70,JS,$acentColor,white)
+
+.php
+  @include circularProgress(60,PHP,$icons,white)
+
+.jQuery
+  @include circularProgress(70,jQuery,$acentColor,white)
+.containerSkills
+  display: flex
+  justify-content: space-around
+  flex-wrap: wrap
+
+
+
+
+
+
+

@@ -1,19 +1,29 @@
+
 <div id="ficha">
+  <h4>Perfil:</h4>
   <div id="descripcionFicha">
     <ul>
-      <li>Nombre: {{ elements?.name }}</li>
-      <li>Telefono: {{ elements?.phone }}</li>
-      <li>Email: {{ elements?.mail }}</li>
+      <li><i class="fas fa-user"></i><span>Nombre:</span> {{ elements?.name }}</li>
+      <li><i class="fas fa-phone"></i><span>Telefono:</span> {{ elements?.phone }}</li>
+      <li><i class="fas fa-at"></i><span>Email:</span> {{ elements?.mail }}</li>
     </ul>
   </div>
   <div id="photoFicha">
-    <img [src]="elements.photo" alt="" />
+    <img [src]="elements?.photo" alt="" />
     <ul>
       <li *ngFor="let element of elements?.socialNetwork">
-        <a [href]="element.url"><i class="fab {{ element.icon }}"></i></a>
+        <a [href]="element?.url"><i class="fab {{ element?.icon }}"></i></a>
       </li>
     </ul>
   </div>
-
-  <!-- <img src="../../../assets/fotos-perfil-whatsapp_16.jpg" alt=""> -->
+  <div id='estudiosFicha'>
+    <h4><i class="fas fa-graduation-cap"></i>Estudios:</h4>
+    <ul>
+      <li *ngFor="let element of elements?.estudios">
+        <div id="mainlist">{{ element?.name }}</div>
+        <div id="datelist">{{ element?.date }}</div>
+        <div id="alterlist">{{ element?.location }}</div>
+      </li>
+    </ul>
+  </div>
 </div>

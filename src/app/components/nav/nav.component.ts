@@ -15,7 +15,6 @@ export class NavComponent implements OnInit {
   ngOnInit() {
     this.acceso.getJSON().subscribe((data)=>{
       this.elements = data['NAV'];
-      console.log();
     });
 
   }

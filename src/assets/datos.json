@@ -26,6 +26,44 @@
         "url": "https://github.com/Markweell?tab=repositories",
         "icon": "fab fa-github"
       }
+    ],
+    "estudios": [
+      {
+        "name": "Bachiller-Ciencias",
+        "date":"2011-2012",
+        "location":"IES Federico Mayor Zaragoza"
+      },
+      {
+        "name": "CFGS Desarrollo web",
+        "date":"2018-2019",
+        "location": "IES Gran Capitán"
+      }
     ]
-  }
+  },
+  "EXPERIENCIA":[
+    {
+      "company": "Atmira, Espacio de consultaría",
+      "description": "Alumno en prácticas. Front-end developer con Angular",
+      "date": "2019",
+      "location": "Córdoba"
+    },
+    {
+      "company": "Taberna Corredera",
+      "description": "Camarero fines de semana y festivos.",
+      "date": "2018-19",
+      "location": "Córdoba"
+    },
+    {
+      "company": "Calosa Instalaciones SL",
+      "description": "Peón Taller. Corte y refinamiento de placas destinadas a techos.",
+      "date": "2016-17",
+      "location": "Sevilla"
+    },
+    {
+      "company": "IMD",
+      "description": "Árbitro Baloncesto.",
+      "date": "2009-12",
+      "location": "Sevilla"
+    }
+  ]
 }

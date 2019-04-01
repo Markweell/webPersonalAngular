@@ -1,0 +1,15 @@
+<div id="experiencia">
+  <h4>Experiencia Laboral</h4>
+  <div id="elementosLaborales">
+    <div *ngFor="let element of elements" id="elementoLaboral">
+      <div class="contenedorCabezera">
+        <div id="companyExperiencia">{{ element?.company }}</div>
+        <div id="locationExperiencia">
+            {{ element?.location }}
+            <span id="dateExperiencia">{{ element?.date }}</span>
+          </div>
+      </div>
+      <div id="descriptionExperiencia">{{ element?.description }}</div>
+    </div>
+  </div>
+</div>
