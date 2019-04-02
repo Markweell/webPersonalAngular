@@ -1,9 +1,38 @@
+<h4>Habilidades: </h4>
 <div class="containerSkills">
+  <ng-container *ngFor="let element of elements; let i = index">
     <crm-habilidad
-    [percent]='50'
-    [skill]='HTML'
-    [color]='black'
-    [bgcolor]='black'
+      [percent]="element.percent"
+      [skill]="element.skill"
+      [topColor]="i % 2 == 0 ? 'rgba(0,150,136,1)' : 'rgba(242,177,0,1)'"
+      [endColor]="i % 2 == 0 ? 'rgba(242,177,0,.2)' : 'rgba(0,150,136,.2)'"
+      [color]="'black'"
+      [bgColor]="'white'"
     ></crm-habilidad>
+  </ng-container>
 </div>
-
+<!-- <h4>Habilidades: </h4>
+<div class="containerSkills">
+  <ng-container *ngFor="let element of elements; let i = index">
+    <ng-template [ngIf]="i % 2 == 0" [ngIfElse]="impar">
+      <crm-habilidad
+        [percent]="element.percent"
+        [skill]="element.skill"
+        [topColor]="'rgba(0,150,136,1)'"
+        [endColor]="'rgba(242,177,0,.2)'"
+        [color]="'black'"
+        [bgColor]="'white'"
+      ></crm-habilidad>
+    </ng-template>
+    <ng-template #impar>
+      <crm-habilidad
+        [percent]="element.percent"
+        [skill]="element.skill"
+        [topColor]="'rgba(242,177,0,1)'"
+        [endColor]="'rgba(0,150,136,.2)'"
+        [color]="'black'"
+        [bgColor]="'white'"
+      ></crm-habilidad>
+    </ng-template>
+  </ng-container>
+</div> -->

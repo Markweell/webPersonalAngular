@@ -65,5 +65,46 @@
       "date": "2009-12",
       "location": "Sevilla"
     }
+  ],
+  "HABILIDADES":[
+    {
+      "percent":"75",
+      "skill":"HTML"
+    },
+    {
+      "percent":"75",
+      "skill":"CSS"
+    },
+    {
+      "percent":"65",
+      "skill":"JS"
+    },
+    {
+      "percent":"55",
+      "skill":"Jquery"
+    },
+    {
+      "percent":"40",
+      "skill":"Angular"
+    },
+    {
+      "percent":"35",
+      "skill":"Symfony"
+    },
+    {
+      "percent":"60",
+      "skill":"Java"
+    }
+  ],
+  "APTITUDES":[
+    "Capacidad de Adaptación al cambio",
+    "Tabajador",
+    "Constante",
+    "Sociable",
+    "Extrovertido",
+    "Abierto al trabajo en equipo",
+    "Sincero",
+    "Curioso",
+    "Proactivo"
   ]
 }

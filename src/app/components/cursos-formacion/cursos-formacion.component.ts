@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AccesoJSONService } from 'src/app/acceso-json.service';
 
 @Component({
   selector: 'crm-cursos-formacion',
@@ -6,10 +7,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./cursos-formacion.component.sass']
 })
 export class CursosFormacionComponent implements OnInit {
-
-  constructor() { }
+  elements;
+  constructor(private acceso: AccesoJSONService) { }
 
   ngOnInit() {
+    this.acceso.getJSON().subscribe((data) => {
+      this.elements = data['APTITUDES'];
+    });
+
   }
+
 
 }
