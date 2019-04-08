@@ -1,3 +1,196 @@
-<p>
-  contacto works!
-</p>
+<form class="profileForm" [formGroup]="profileForm" (ngSubmit)="enviar(profileForm)">
+  <mat-form-field class="example-full-width">
+    <input matInput placeholder="Nombre" formControlName="nombre" />
+    <mat-error
+      *ngIf="
+        nombre.hasError('cuentaCaracteres') && !nombre.hasError('required')
+      "
+    >
+      Patron no cumplido.
+    </mat-error>
+    <mat-error *ngIf="nombre.hasError('required')">
+      Es necesario rellenar este campo.
+    </mat-error>
+    <mat-error *ngIf="nombre.hasError('required')">
+      Es necesario rellenar este campo.
+    </mat-error>
+  </mat-form-field>
+
+  <mat-form-field class="example-full-width">
+    <input matInput placeholder="Email" formControlName="email" />
+    <mat-error *ngIf="email.hasError('email') && !email.hasError('required')">
+      Patrón de email no cumplido.
+    </mat-error>
+    <mat-error *ngIf="email.hasError('required')">
+      Es necesario rellenar este campo.
+    </mat-error>
+  </mat-form-field>
+
+  <mat-form-field class="example-full-width">
+    <input matInput placeholder="Telefono" formControlName="telefono" />
+    <mat-error
+      *ngIf="
+        telefono.hasError('cumplePatron') && !telefono.hasError('required')
+      "
+    >
+      El telefono debe tener 9 dígitos.
+    </mat-error>
+    <mat-error *ngIf="telefono.hasError('required')">
+      Es necesario rellenar este campo.
+    </mat-error>
+  </mat-form-field>
+
+  <mat-form-field class="example-full-width">
+    <div class="badge">{{ MAX_LENGTH - mensaje.value.length }}</div>
+    <textarea
+      matInput
+      placeholder="Mensaje"
+      formControlName="mensaje"
+      rows="4"
+    ></textarea>
+    <mat-error
+      *ngIf="mensaje.hasError('minlength') && !mensaje.hasError('required')"
+    >
+      Necesita al menos 5 carácteres
+    </mat-error>
+    <mat-error
+      *ngIf="mensaje.hasError('maxlength') && !mensaje.hasError('required')"
+    >
+      No puede tener más de {{MAX_LENGTH}} carácteres
+    </mat-error>
+    <mat-error *ngIf="mensaje.hasError('required')">
+      Es necesario rellenar este campo.
+    </mat-error>
+  </mat-form-field>
+  <!-- {{ mensaje?.errors['minlength']['requiredLength']}}
+  {{ mensaje?.errors['maxlength']}} -->
+
+  <button mat-raised-button type="submit">Enviar</button>
+  <!--
+    [disabled]="!profileForm.valid"
+  {{ (MAX_LENGTH -mensaje.value.length) }}-->
+</form>
+<!-- <form [formGroup]="profileForm">
+  <label>
+    Email:
+    <input placeholder="Email" formControlName="email" />
+  </label>
+  <div *ngIf="email.invalid">
+    <div *ngIf="email.errors['required']">
+      Email is required
+    </div>
+    <div *ngIf="email.errors['email']">
+      El email no es valido
+    </div>
+  </div>
+</form> -->
+
+<!-- <div class="contain">
+  <form [formGroup]="profileForm" (ngSubmit)="onSubmit()">
+    <label>
+      First Name:
+      <input type="text" formControlName="firstName" required />
+    </label>
+    <div
+      *ngIf="firstName.invalid && (firstName.dirty || firstName.touched)"
+      class="alert alert-danger"
+    >
+      <div *ngIf="firstName.errors['required']">
+        Name is required.
+      </div>
+      <div *ngIf="firstName.errors['minlength']">
+        Name must be at least 4 characters long.
+      </div>
+      <div *ngIf="firstName.errors['forbiddenName']">
+        Name cannot be Bob.
+      </div>
+    </div>
+
+    <label>
+      Last Name:
+      <input type="text" formControlName="lastName" (blur)="algoFun()"/>
+    </label>
+    <div
+      *ngIf="lastName.invalid && (lastName.dirty || lastName.touched)"
+      class="alert alert-danger"
+    >
+      <div *ngIf="lastName.errors['require']">
+        Name is required.
+
+      </div>
+      <div *ngIf="lastName.errors['algo']">
+          {{lastName.errors['mensaje']}}
+          Name cannot be Bob.
+      </div>
+    </div>
+    <div formGroupName="address">
+      <h3>Address</h3>
+
+      <label>
+        Street:
+        <input type="text" formControlName="street" />
+      </label>
+
+      <label>
+        City:
+        <input type="text" formControlName="city" />
+      </label>
+
+      <label>
+        State:
+        <input type="text" formControlName="state" />
+      </label>
+
+      <label>
+        Zip Code:
+        <input type="text" formControlName="zip" />
+      </label>
+    </div>
+    <div formArrayName="aliases">
+      <h3>Aliases</h3>
+      <button type="button" (click)="addAlias()">Add Alias</button>
+
+      <div *ngFor="let address of aliases.controls; let i = index">
+        <label>
+          Alias:
+          <input type="text" [formControlName]="i" />
+        </label>
+      </div>
+    </div>
+    <button type="submit" [disabled]="!profileForm.valid">Submit</button>
+    <mat-form-field class="example-full-width">
+      <input matInput placeholder="Email" [formControl]="emailFormControl"
+             [errorStateMatcher]="matcher">
+      <mat-hint>Errors appear instantly!</mat-hint>
+      <mat-error *ngIf="emailFormControl.hasError('email') && !emailFormControl.hasError('required')">
+        Please enter a valid email address
+      </mat-error>
+      <mat-error *ngIf="emailFormControl.hasError('required')">
+        Email is <strong>required</strong>
+      </mat-error>
+    </mat-form-field>
+  </form>
+
+  <div class="footer">
+    <p>Form Status: {{ profileForm.value | json }}</p>
+    <p>Form Status: {{ profileForm.status }}</p>
+    <p>
+      <button (click)="updateProfile()">Update Profile</button>
+    </p>
+    <a routerLink="/">Atrás</a>
+  </div>
+</div> -->
+
+<!-- <mat-form-field>
+  <input matInput placeholder="Input">
+</mat-form-field>
+
+<mat-form-field>
+  <textarea matInput placeholder="Textarea"></textarea>
+</mat-form-field>
+
+<mat-form-field>
+  <mat-select placeholder="Select">
+    <mat-option value="option">Option</mat-option>
+  </mat-select>
+</mat-form-field> -->

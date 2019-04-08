@@ -1,0 +1,14 @@
+$break-small: 415px;
+$break-large: 1200px;
+.navigationBlog
+  text-align: end
+  padding: 10px
+  input
+    padding: 5px 10px
+    border-radius: 20px
+.containerBlog
+  width: 100%
+  @media screen and (min-width: $break-large)
+    display: grid
+    grid-template-columns: repeat(3, 1fr)
+    grid-gap: 10px

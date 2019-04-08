@@ -5,11 +5,29 @@
     { "name": "Curriculum", "route": "/curriculum" },
     { "name": "Contacto", "route": "/contacto" }
   ],
+  "BLOG":[
+    {
+      "title": "Titulo básico",
+      "photoCard": "assets/perfil.jpg",
+      "tag":["etiq","etiq2","etiq3","etiq4"],
+      "descriptionCard": "Lorem ipsum...",
+      "created_at": "08/04/2019",
+      "created_by": "Marcos Gallardo Pérez"
+    },
+    {
+      "title": "Tutorial de angular resuelto",
+      "photoCard": "assets/fotos-perfil-whatsapp_16.jpg",
+      "tag":["etiq","etiq2","etiq3","etiq4"],
+      "descriptionCard": "Lorem ipsum...",
+      "created_at": "08/04/2019",
+      "created_by": "Marcos Gallardo Pérez"
+    }
+  ],
   "FICHA": {
     "name": "Marcos Gallardo Pérez",
     "phone": "605231494",
     "mail": "marcosgallardoperez@gmail.com",
-    "photo": "assets/fotos-perfil-whatsapp_16.jpg",
+    "photo": "assets/perfil.jpg",
     "socialNetwork": [
       {
         "name": "twitter",

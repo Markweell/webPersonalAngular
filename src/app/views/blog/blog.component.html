@@ -1,3 +1,18 @@
-<p>
-  blog works!
-</p>
+<div class="navigationBlog">
+    <input type="text" name="" id="" (keyup)="busquedaDeCoincidencias()" [(ngModel)]="input">
+</div>
+<div class="containerBlog">
+  <ng-container *ngFor="let element of elements">
+      <crm-targeta-blog
+      [title]="element.title"
+      [description]="element.descriptionCard"
+      [img]="element.photoCard"
+      [created_at]="element.created_at"
+      [created_by]="element.created_by"
+      [tag]="element.tag"
+    ></crm-targeta-blog>
+  </ng-container>
+
+</div>
+
+

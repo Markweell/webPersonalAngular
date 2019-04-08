@@ -13,33 +13,26 @@ $icons: #009688
   position: relative
   background: linear-gradient(0deg, transparent 50%, rgba($acentColor,.2) 50%)
   z-index: 0
-  .circuloHijo1
+  .circuloHijo1, .circuloHijo2, .circuloHijo3
     width: 100px
     height: 100px
     border-radius: 50%
     position: absolute
+  .circuloHijo1
     background: linear-gradient(0deg, $icons 50%,  transparent 50%)
     transform: rotate(0deg)
     z-index: 1
     transition: 2s
   .circuloHijo2
-    width: 100px
-    height: 100px
-    border-radius: 50%
-    position: absolute
-    background: linear-gradient(0deg, white 50%, transparent 50%)
+    background: linear-gradient(0deg, black 50%, transparent 50%)
     z-index: 2
     transform: scale(1.1)
   .circuloHijo3
-    width: 100px
-    height: 100px
-    border-radius: 50%
-    position: absolute
     top: 0
     left: 0
     padding: 1em
     box-sizing: border-box
-    background: linear-gradient(white 50%, transparent 50%) content-box
+    background: white content-box
     z-index: 3
     display: flex
     flex-flow: column
