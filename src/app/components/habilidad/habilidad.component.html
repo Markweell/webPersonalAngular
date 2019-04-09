@@ -1,5 +1,6 @@
-<div class="circuloPadre" [ngStyle]="{'background': bgColorPadre }">
-  <div class="circuloHijo1" [ngStyle]="{'background': topColor1, 'transform':rotate1 }">
+<div class="circuloPadre" [ngStyle]="{'background': bgColorPadre }" (click) = "rotate()">
+  <div class="circuloHijo1" [ngStyle]="{'background': topColor1, 'transform':rotate1 }" >
+    <!-- [@translate]="isOpen ? 'open' : 'closed'" -->
   </div>
   <div class="circuloHijo2" [ngStyle]="{'background': bgColor2 }">
   </div>

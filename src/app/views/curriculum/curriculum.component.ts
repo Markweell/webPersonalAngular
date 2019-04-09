@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ElementRef, AfterViewChecked } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 
 
 @Component({
@@ -6,9 +7,10 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './curriculum.component.html',
   styleUrls: ['./curriculum.component.sass']
 })
-export class CurriculumComponent implements OnInit {
-  constructor() { }
+export class CurriculumComponent implements OnInit{
+  constructor(private route: ActivatedRoute) { }
 
   ngOnInit() {
   }
+
 }

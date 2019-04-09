@@ -1,4 +1,10 @@
-<div id="header">
-    <img src="../../../assets/fotos-perfil-whatsapp_16.jpg" alt="">
-    <h1>Marcos Gallardo Pérez</h1>
+
+<div class="headerContainer" [ngClass]="{'scrolled' : variable}">
+  <div class="header" [ngClass]="{'scrolled' : variable}">
+    <div class="header-title">
+      <h1 class="text-light title font-2">Marcos Gallardo Pérez</h1>
+      <p class="text-capitalize text-light">Bienvenido a mi web personal</p>
+    </div>
+    <a  class="sd" (click)="annadirClase()">Scroll Down</a>
+</div>
 </div>

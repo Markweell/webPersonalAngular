@@ -1,23 +1,49 @@
 $break-small: 415px;
 $break-large: 1200px;
 
-#header
+.quitar
+  display: none
+.scrolled
+    transform: translate3d(0, -100%, 0) scale(0.75)
+    opacity: 0
+.headerContainer
+  font-size: 16px
+  height: 100vh
   width: 100%
-  display: flex
-  justify-items: center
-  align-items: center
-  flex-flow: column
-  margin-top: 30px
-  border-bottom: 1px solid black
+  position: fixed
+  top: 0
+  z-index: 9
+  transition: all 1.6s linear
+  .header
+    background-image: url(../../../assets/fondo.jpg)
+    background-size: cover
+    background-position: center
+    display: table
+    width: 100%
+    height: 100vh
+    position: fixed
+    top: 0
+    z-index: 1
+    transition: all 1.6s linear
 
-  h1
-    font-size: 24px
-    @media screen and (min-width: $break-small)
-      font-size: 30px
+  .header-title
+    display: table-cell
+    vertical-align: middle
+    text-align: center
+  .title
+    letter-spacing: .3em
+    text-transform: uppercase
+  .sd
+    color: #fff
+    cursor: pointer
+    position: absolute
+    bottom: 20px
+    left: 50%
+    transform: translateX(-50%)
+    &:hover
+      color: #fff
+      opacity: .7
+      text-decoration: none
 
-  img
-    border-radius: 200px
-    width: 250px
-    height: 187.5px
 
 

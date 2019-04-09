@@ -6,12 +6,12 @@ import { AccesoJSONService } from 'src/app/acceso-json.service';
   templateUrl: './blog.component.html',
   styleUrls: ['./blog.component.sass']
 })
+
 export class BlogComponent implements OnInit {
   elements;
   elementsCopy;
   input;
   constructor(private acceso: AccesoJSONService) { }
-
   ngOnInit() {
     this.acceso.getJSON().subscribe((data) => {
       this.elements = data['BLOG'];
@@ -22,7 +22,7 @@ export class BlogComponent implements OnInit {
     let elements = [];
     this.elementsCopy.forEach(element => {
         if(RegExp(this.input).test(element['title'])){
-          elements.push(element)
+          elements.push(element);
         }
     });
     this.elements= elements;

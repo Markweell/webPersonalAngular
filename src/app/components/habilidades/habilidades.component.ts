@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, AfterViewChecked, AfterViewInit, ElementRef } from '@angular/core';
 import { AccesoJSONService } from 'src/app/acceso-json.service';
 
 @Component({
@@ -6,7 +6,7 @@ import { AccesoJSONService } from 'src/app/acceso-json.service';
   templateUrl: './habilidades.component.html',
   styleUrls: ['./habilidades.component.sass']
 })
-export class HabilidadesComponent implements OnInit {
+export class HabilidadesComponent implements OnInit{
   elements;
   constructor(private acceso: AccesoJSONService) { }
 
@@ -14,7 +14,6 @@ export class HabilidadesComponent implements OnInit {
     this.acceso.getJSON().subscribe((data) => {
       this.elements = data['HABILIDADES'];
     });
-
   }
 
 }

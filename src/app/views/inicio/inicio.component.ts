@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'crm-inicio',
@@ -6,10 +7,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./inicio.component.sass']
 })
 export class InicioComponent implements OnInit {
-
-  constructor() { }
+variable: string;
+  constructor(private route: ActivatedRoute) { }
 
   ngOnInit() {
+
   }
 
 }
