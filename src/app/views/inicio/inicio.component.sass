@@ -1,0 +1,47 @@
+.contenedorTitulo
+  margin: auto
+  display: table
+.container
+  height: 100vh
+  width: 100%
+  &:hover .simulaEscritura
+    animation: escribir 5s steps(35)
+  &:hover p
+    visibility: visible
+    transition-property: all
+    transition-delay: 5s
+    animation-name: aparecer
+    animation-duration: 2s
+    animation-delay: 5s
+h1
+  font-family: monospace
+  position: relative
+  float: left
+  background: white
+  color: black
+  font-size: 2.5em
+
+
+p
+  visibility: hidden
+
+h1 span
+  position: absolute
+  right: 0
+  width: 0
+  background: white
+  border-left: 1px solid #000
+
+
+
+@keyframes escribir
+    0%
+      width: 100%
+    100%
+      width: 0
+
+@keyframes aparecer
+    0%
+      opacity: 0
+    100%
+      opacity: 1

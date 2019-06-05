@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { AccesoJSONService } from 'src/app/acceso-json.service';
 
 @Component({
   selector: 'crm-inicio',
@@ -7,11 +8,15 @@ import { ActivatedRoute } from '@angular/router';
   styleUrls: ['./inicio.component.sass']
 })
 export class InicioComponent implements OnInit {
-variable: string;
-  constructor(private route: ActivatedRoute) { }
+  elements: string;
+  constructor(
+    private route: ActivatedRoute,
+    private accesoJson: AccesoJSONService) { }
 
   ngOnInit() {
-
+    this.accesoJson.getJSON().subscribe((data) => {
+      this.elements = data['INICIO'];
+    });
   }
 
 }

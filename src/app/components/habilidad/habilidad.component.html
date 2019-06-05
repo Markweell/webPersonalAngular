@@ -1,4 +1,4 @@
-<div class="circuloPadre" [ngStyle]="{'background': bgColorPadre }" (click) = "rotate()">
+<div class="circuloPadre" [ngStyle]="{'background': bgColorPadre }" >
   <div class="circuloHijo1" [ngStyle]="{'background': topColor1, 'transform':rotate1 }" >
     <!-- [@translate]="isOpen ? 'open' : 'closed'" -->
   </div>
@@ -6,6 +6,6 @@
   </div>
   <div class="circuloHijo3" [style.color]="color" [ngStyle]="{'background': bgColor3 }">
     <span class="habilidad">{{ skill | habilidad}}</span>
-    <span class="percent">{{ percent }}%</span>
+    <!-- <span class="percent">{{ percent }}%</span> -->
   </div>
 </div>

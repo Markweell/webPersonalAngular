@@ -112,6 +112,14 @@
     {
       "percent":"60",
       "skill":"Java"
+    },
+    {
+      "percent":"60",
+      "skill":"GitHub"
+    },
+    {
+      "percent":"60",
+      "skill":"SQL"
     }
   ],
   "APTITUDES":[
@@ -120,9 +128,12 @@
     "Constante",
     "Sociable",
     "Extrovertido",
-    "Abierto al trabajo en equipo",
+    "Trabajo en equipo",
     "Sincero",
     "Curioso",
     "Proactivo"
-  ]
+  ],
+  "INICIO":{
+    "titulo": "Hola, bienvenido a mi web personal."
+  }
 }
