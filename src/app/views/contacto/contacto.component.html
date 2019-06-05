@@ -1,15 +1,8 @@
 <form class="profileForm" [formGroup]="profileForm" (ngSubmit)="enviar(profileForm)">
   <mat-form-field class="example-full-width">
     <input matInput placeholder="Nombre" formControlName="nombre" />
-    <mat-error
-      *ngIf="
-        nombre.hasError('cuentaCaracteres') && !nombre.hasError('required')
-      "
-    >
+    <mat-error *ngIf="nombre.hasError('cuentaCaracteres') && !nombre.hasError('required')">
       Patron no cumplido.
-    </mat-error>
-    <mat-error *ngIf="nombre.hasError('required')">
-      Es necesario rellenar este campo.
     </mat-error>
     <mat-error *ngIf="nombre.hasError('required')">
       Es necesario rellenar este campo.

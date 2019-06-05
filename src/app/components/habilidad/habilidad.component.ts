@@ -25,9 +25,13 @@ export class HabilidadComponent implements OnInit{
 
   @HostListener('window:scroll', ['$event'])
   doSomethingOnWindowsScroll($event: Event){
-    console.log($event['pageY'])
-    if($event['pageY']>200){
-      const porcentaje = this.progress(this.percent);
+    console.log($event.target['scrollingElement'].scrollTop)
+    console.log($event)
+    const porcentaje = this.progress(this.percent);
+    if($event.target['scrollingElement'].scrollTop > 200){
+      this.rotate1 = 'rotate(' + porcentaje + 'deg)';
+    }
+    if($event['pageY'] > 200){
       this.rotate1 = 'rotate(' + porcentaje + 'deg)';
     };
   }
